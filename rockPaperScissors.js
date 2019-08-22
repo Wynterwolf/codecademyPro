@@ -16,16 +16,17 @@ const getUserChoice = userInput => {
 //console.log(getUserChoice('paper'));
 
 const getComputerChoice = () => {
-  Math.Floor(Math.random() * 3)
+  Math.floor(Math.random() * 3)
 };
 //switch for getComputerChoice
 switch (getComputerChoice) {
-  case 0:
-    return "rock";
   case 1:
+    return "rock";
+  case 2:
     return "paper";
-  default:
-    return "scissors"
+  case 3:
+    return "scissors";
+
 };
 //check to see if it works in console
 console.log(getComputerChoice());
