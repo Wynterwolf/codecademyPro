@@ -1,7 +1,7 @@
 //const and arrow function with 1 param for user choice
 const getUserChoice = userInput => {
   //if user input is rock, paper scissors
-  if (userInput == 'rock'|| userInput == 'paper'|| userInput == 'scissors')
+  if (userInput == 'rock'|| userInput == 'paper'|| userInput == 'scissors' || userInput == 'bomb')
 {
   //return input
   return userInput;
@@ -18,11 +18,11 @@ const getUserChoice = userInput => {
 const getComputerChoice = () => {
   const choice = Math.floor(Math.random() * 3)
   switch (choice) {
-    case 1:
+    case 0:
       return "rock"
-    case 2:
+    case 1:
       return "paper"
-    case 3:
+    case 2:
       return "scissors"
   }
 };
@@ -30,13 +30,16 @@ const getComputerChoice = () => {
 //console.log(getComputerChoice());
 // to determine winner
 const determineWinner = (userChoice, computerChoice) => {
+  if (userChoice === 'bomb'){
+    return "BOMB ALWAYS WINS!"
+  }
   if (userChoice === computerChoice) {
       return 'It is a tie!';
       }
   if (userChoice === 'rock' && computerChoice === 'paper'){
-      return 'The computer won!'
+      return 'The User Won!'
     } else {
-      return 'You Won!'
+      return 'The computer won!'
     }
   if (userChoice === 'scissors' && computerChoice === 'paper'){
       return 'You Won!'
@@ -48,7 +51,7 @@ const determineWinner = (userChoice, computerChoice) => {
     } else {
       return "You won!"
     }
-  }
+}
 
 //console.log(determineWinner('rock', 'paper'));
 //console.log(determineWinner('paper','paper')); //tie
@@ -56,7 +59,7 @@ const determineWinner = (userChoice, computerChoice) => {
 // setup complete, start the game and log results
 // function for playgame
 const playGame = () => {
-  const userChoice = getUserChoice('rock');
+  const userChoice = getUserChoice('bomb');
   const computerChoice = getComputerChoice();
   console.log(`You threw: ${userChoice}`);
   console.log(`The computer threw: ${computerChoice}`)
