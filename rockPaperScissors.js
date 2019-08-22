@@ -3,10 +3,11 @@ const getUserChoice = userInput => {
   //if user input is rock, paper scissors
   if (userInput == 'rock'|| userInput == 'paper'|| userInput == 'scissors')
 {
-  //return input
-  return userInput;
   //lowercase it all
   userInput = userInput.toLowerCase();
+  //return input
+  return userInput;
+  
 } else {
   //otherwise print an error to console
   console.log('There has been an error!')
@@ -16,17 +17,17 @@ const getUserChoice = userInput => {
 //console.log(getUserChoice('paper'));
 
 const getComputerChoice = () => {
-  Math.floor(Math.random() * 3)
-};
-//switch for getComputerChoice
-switch (getComputerChoice) {
-  case 1:
-    return "rock";
-  case 2:
-    return "paper";
-  case 3:
-    return "scissors";
+  const choice = Math.floor(Math.random() * 3)
 
+  //switch for getComputerChoice
+  switch (choice) {
+    case 0:
+      return "rock";
+    case 1:
+      return "paper";
+    case 2:
+      return "scissors";
+  };
 };
 //check to see if it works in console
 console.log(getComputerChoice());
