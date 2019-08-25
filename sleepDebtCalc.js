@@ -3,7 +3,7 @@ const getSleepHours = (day) => {
   //use if else for rest of week
   if (day === 'monday'){
     return 8;
-  } else if
+  } else if 
   (day === 'tuesday'){
     return 8;
   } else if
@@ -21,7 +21,7 @@ const getSleepHours = (day) => {
   } else
   (day === 'sunday')
     return 8;
-  };
+
 // test with console log
 console.log(getSleepHours('monday'))
 //calculate sleep debt
@@ -36,4 +36,5 @@ if (actualSleepHours === idealSleepHours){
     console.log('Overslept!');
   } else {
       console.log('Sleep More!');
-    }
+    }};
+console.log(calculateSleepDebt());
