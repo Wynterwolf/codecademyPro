@@ -1,5 +1,5 @@
-// function named getSleepHours with single param day
-const getSleepHours = (day) => {
+//create a function returning night's num of hours rested
+const getSleepHours = day => {
   //use if else for rest of week
   if (day === 'monday'){
     return 8;
@@ -15,22 +15,35 @@ const getSleepHours = (day) => {
     return 8;
   } else if (day === 'sunday'){
     return 8;
-  }
-// test with console log
+  }};
+//console test
+//console.log(getSleepHours('monday'));
+
+//implicit return function getActualSleepHours()
+const getActualSleepHours = () => getSleepHours('monday') + getSleepHours('tuesday') + getSleepHours('wednesday') + getSleepHours('thursday') + getSleepHours('friday') + getSleepHours('saturday') + getSleepHours('sunday')
+;
+//log check
+//console.log(getActualSleepHours());
+const getIdealSleepHours = () => {
+  const idealHours = 6;
+  return idealHours * 7;
 };
+
+//console test
+//console.log(getActualSleepHours());
+//console.log(getIdealSleepHours());
 
 const calculateSleepDebt = () => {
   const actualSleepHours = getActualSleepHours();
 	const idealSleepHours = getIdealSleepHours();
+};
 
-console.log(getSleepHours('monday'));
-//calculate sleep debt
-//calculate
-if (actualSleepHours === idealSleepHours){
+//if/else for results.
+if (getActualSleepHours === getIdealSleepHours){
   console.log('You are getting the perfect amount of sleep!');
-} else if (actualSleepHours > idealSleepHours){
+} else if (getActualSleepHours > getIdealSleepHours){
     console.log('Overslept!');
   } else {
-      console.log('Sleep More!');
-    }};
-console.log(calculateSleepDebt());
+      console.log('Sleep More! You only got ' + (getActualSleepHours() - getIdealSleepHours()) + ' of sleep this week!');
+    };
+calculateSleepDebt()
