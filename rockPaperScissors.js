@@ -16,7 +16,6 @@ const getUserChoice = userInput => {
 //console.log(getUserChoice('paper'));
 // for computer choice we make:
 const getComputerChoice = () => {
-<<<<<<< HEAD
   Math.floor(Math.random() * 3)
 //switch for getComputerChoice
 switch (getComputerChoice) {
@@ -26,44 +25,6 @@ switch (getComputerChoice) {
     return "paper";
   case 3:
     return "scissors";
-=======
-  const choice = Math.floor(Math.random() * 3)
-  switch (choice) {
-    case 0:
-      return "rock"
-    case 1:
-      return "paper"
-    case 2:
-      return "scissors"
-  }
-};
-//test for computer choice
-//console.log(getComputerChoice());
-// to determine winner
-const determineWinner = (userChoice, computerChoice) => {
-  if (userChoice === 'bomb'){
-    return "BOMB ALWAYS WINS!"
-  }
-  if (userChoice === computerChoice) {
-      return 'It is a tie!';
-      }
-  if (userChoice === 'rock' && computerChoice === 'paper'){
-      return 'The User Won!'
-    } else {
-      return 'The computer won!'
-    }
-  if (userChoice === 'scissors' && computerChoice === 'paper'){
-      return 'You Won!'
-    } else {
-      return "The Computer Won!"
-    }
-  if (userChoice === "paper" && computerChoice === "rock"){
-      return 'The computer won!'
-    } else {
-      return "You won!"
-    }
-}
->>>>>>> 13ccf8a68e115c1af6ebef4faf16f59f58c3ff31
 
 //console.log(determineWinner('rock', 'paper'));
 //console.log(determineWinner('paper','paper')); //tie
