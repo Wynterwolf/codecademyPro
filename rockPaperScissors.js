@@ -17,7 +17,6 @@ const getUserChoice = userInput => {
 
 const getComputerChoice = () => {
   Math.floor(Math.random() * 3)
-};
 //switch for getComputerChoice
 switch (getComputerChoice) {
   case 1:
