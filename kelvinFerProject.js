@@ -12,3 +12,20 @@ console.log(`The temperature is ${fahrenheit} degrees Fehrenheit.`)
 const newton = Math.floor(celsius * (33/100));
 //print out
 console.log(`The temperature is ${newton} on the Newton scale.`)
+
+// OR THIS
+
+// forcast today in kelvin
+let kelvin = 0
+// conversaion to celsius
+let celsius = kelvin - 273
+// equation to calculate fahrenheit
+let fahrenheit = celsius * (9/5) + 32
+//use Math.floor to round decimal
+fahrenheit = Math.floor(fahrenheit)
+//console log output
+console.log(`The temperature is ${fahrenheit} degrees Fahrenheit`)
+// added newton
+let newton = Math.floor(celsius * (33/100))
+//console log newton
+console.log(`The temperature is ${newton} in Newton`)
