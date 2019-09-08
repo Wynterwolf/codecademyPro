@@ -65,7 +65,7 @@ else if (userChoice === 'paper') {
 }
 const playGame = () => {
   const userChoice = 
-        getUserChoice();
+        getUserChoice("rock");
   const computerChoice =
         getComputerChoice();
   console.log('You threw: ' + userChoice);
