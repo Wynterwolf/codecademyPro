@@ -13,20 +13,23 @@ return ‘You have entered an invalid grade.’ if any of the three grades are l
 // Write your function here:
 
 const finalGrade = (test1, test2, test3) => {
-    const average = ((test1 + test2 + test3 / 3))
-  } if (average >= 0 && average <= 60){
-    return "F";
-  } else if (average >= 60 && average <= 69) {
-    return "D";
-  } else if (average >= 70 && average <= 79) {
-    return "C";
-  } else if (average >= 80 && average <= 89) {
-    return "B";
-  } else if (average >= 90 && average <= 100) {
-    return "A"
-  }
-
+  
+  if ((test1 < 0 || test1 > 100) || (test2 < 0 || test2 > 100) || (test3 < 0 || test3 > 100))
+    return "You have entered an invalid grade."
+  const average = ((test1 + test2 + test3) / 3)
+  
+  if (average >= 0 && average <= 60){
+  return "F";
+	} if (average >= 60 && average <= 69) {
+  return "D";
+	} if (average >= 70 && average <= 79) {
+  return "C";
+	} if (average >= 80 && average <= 89) {
+  return "B";
+	} if (average >= 90 && average <= 100) {
+  return "A";
+}};
   // Uncomment the line below when you're ready to try out your function
-  console.log(finalGrade(87, 75, 90)) // Should print 'A'
+console.log(finalGrade(87, 75, 90)) // Should print 'A'
   
   // We encourage you to add more function calls of your own to test your code!
