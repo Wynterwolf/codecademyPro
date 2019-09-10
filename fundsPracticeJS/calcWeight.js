@@ -15,24 +15,18 @@ For all other inputs, return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, J
 // Write your function here:
 const calculateWeight = (earthWeight, planet) => {
 	switch (planet) {
-    case 'Murcury':
-    	console.log(earthWeight * 0.378);
-    	break;
+    case 'Mercury':
+    	return earthWeight * .378;
     case 'Venus':
-    	console.log(earthWeight * 0.907);
-    	break;
+    	return earthWeight * .907;
     case 'Mars':
-    	console.log(earthWeight * 0.377);
-    	break;
+    	return earthWeight * .377;
     case 'Jupiter':
-    	console.log(earthWeight * 2.36);
-      break;
+    	return earthWeight * 2.36;
     case 'Saturn':
-    	console.log(earthWeight * 0.916)
-    	break;
+    	return earthWeight * .916;
     default:
-    	console.log('Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.')
-      break;
+    	return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.';
   }};
 
 
