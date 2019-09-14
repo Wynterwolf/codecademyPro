@@ -14,33 +14,31 @@ For all other inputs, return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, J
 
 // Write your function here:
 const calculateWeight = (earthWeight, planet) => {
-	switch (planet) {
-    case 'Murcury':
-    	console.log(earthWeight * 0.378);
-    	break;
-    case 'Venus':
-    	console.log(earthWeight * 0.907);
-    	break;
-    case 'Mars':
-    	console.log(earthWeight * 0.377);
-    	break;
-    case 'Jupiter':
-    	console.log(earthWeight * 2.36);
+  switch (planet) {
+    case "Murcury":
+      console.log(earthWeight * 0.378);
       break;
-    case 'Saturn':
-    	console.log(earthWeight * 0.916)
-    	break;
+    case "Venus":
+      console.log(earthWeight * 0.907);
+      break;
+    case "Mars":
+      console.log(earthWeight * 0.377);
+      break;
+    case "Jupiter":
+      console.log(earthWeight * 2.36);
+      break;
+    case "Saturn":
+      console.log(earthWeight * 0.916);
+      break;
     default:
-    	console.log('Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.')
+      console.log(
+        "Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn."
+      );
       break;
-  }};
-
-
-
-
-
+  }
+};
 
 // Uncomment the line below when you're ready to try out your function
-console.log(calculateWeight(100, 'Jupiter')) // Should print 236
+console.log(calculateWeight(100, "Jupiter")); // Should print 236
 
 // We encourage you to add more function calls of your own to test your code!
