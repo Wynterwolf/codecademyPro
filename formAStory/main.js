@@ -2,28 +2,28 @@
 const words = new URLSearchParams(window.location.search);
 
 // Cleans up and capitalizes the names of the animals
-function cleanAndCap (str){
-  if(!str) return null
-  let temp = str.trim()
-  return temp[0].toUpperCase() + temp.substring(1)
+function cleanAndCap(str) {
+  if (!str) return null;
+  let temp = str.trim();
+  return temp[0].toUpperCase() + temp.substring(1);
 }
 
 // Assigning the variables with values used in the story
-const firstAnimal= cleanAndCap(words.get('animal-1'));
-const secondAnimal = cleanAndCap(words.get('animal-2'));
+const firstAnimal = cleanAndCap(words.get("animal-1"));
+const secondAnimal = cleanAndCap(words.get("animal-2"));
 
-const answer = cleanAndCap(words.get('answer'));
-const conjunction = answer === 'Yes' ? 'and' : 'but';
+const answer = cleanAndCap(words.get("answer"));
+const conjunction = answer === "Yes" ? "and" : "but";
 
-const speed = words.get('speed');
-const adj1 = words.get('adj-1');
+const speed = words.get("speed");
+const adj1 = words.get("adj-1");
 
-const thirdAnimal = cleanAndCap(words.get('animal-3'));
-const quote = words.get('quote');
+const thirdAnimal = cleanAndCap(words.get("animal-3"));
+const quote = words.get("quote");
 
-const verb1 = words.get('verb-1');
-const num1 = words.get('num-1');
-const message = words.get('message');
+const verb1 = words.get("verb-1");
+const num1 = words.get("num-1");
+const message = words.get("message");
 
 // The string containing HTML and text which will populate the story.html page
 const story = `<p>A <span class="word" title="id: animal-1">${firstAnimal}</span> was making fun of the <span class="word" title="id: animal-2">${secondAnimal}</span> one day for being so slow.</p>
@@ -39,16 +39,16 @@ const story = `<p>A <span class="word" title="id: animal-1">${firstAnimal}</span
 <p>The <span class="word" title="id: animal-2">${secondAnimal}</span> meanwhile kept going slowly but steadily, and, after a time, passed the place where the <span class="word" title="animal-1">${firstAnimal}</span> was <span class="word" title="id: verb-1">${verb1}</span>. The <span class="word" title="id: animal-1">${firstAnimal}</span> was so caught up in <span class="word" title="id: verb-1">${verb1}</span>; and when at last he did stop, the <span class="word" title="id: animal-2">${secondAnimal}</span> was near the goal. The <span class="word" title="id: animal-1">${firstAnimal}</span> now ran his swiftest, but he could not overtake the <span class="word" title="id: animal-2">${secondAnimal}</span> in time.</p>`;
 
 // Grabbing the title element
-const title = document.getElementById('title');
+const title = document.getElementById("title");
 // Populating the title element with text
 title.innerHTML = `The <span class="word" title="id: animal-1">${firstAnimal}</span> And The  <span class="word" title="id: animal-2">${secondAnimal}</span>`;
 
 // Grabbing the story element
-const storyEl = document.getElementById('story');
+const storyEl = document.getElementById("story");
 // Populating the story element with the value of the story variable
 storyEl.innerHTML = story;
 
 // Grabbing the moral-message element
-const moralMessage = document.getElementById('moral-message');
+const moralMessage = document.getElementById("moral-message");
 // Populating the moral-message element with text
 moralMessage.innerHTML = `<span class="italics" title="id: message">"${message}"</span>`;
