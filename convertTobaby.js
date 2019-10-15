@@ -2,11 +2,12 @@
 
 
 // Write your code here:
-let animalList = []
-function convertToBaby() {
+function convertToBaby(array) {
   for (let index = 0; index < animals.length; ++index){
-    animalList.push([index] + ' baby')
+    array[index] = 'baby ' +  array[index];
   }
+  
+  return array;
 }
 
 
