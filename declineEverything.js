@@ -11,8 +11,16 @@ const politelyDecline = (veg) => {
 }
 
 // Write your code here:
-const declineEverything = array => {
-    array.forEach(veggie => politelyDecline(veggie))
+
+/* Now we need to get healthy! Write a function acceptEverything() that takes in an array of strings and loops through each element in the array and grudgingly accepts each of them, by logging to the console in the following format: 'Ok, I guess I will eat some [element].'
+
+You can use any technique you want to accomplish this task. You can test your function when you’re ready by passing in the veggies array or by making your own array! */
+
+const healthyOption = (veg) => {
+  console.log('Ok, I guess I will eat some ' + veg + '.');
 }
 
-declineEverything(veggies)
+const acceptEverything = (array) => {
+  array.forEach(healthyOption)
+}
+acceptEverything(veggies)
