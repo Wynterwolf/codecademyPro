@@ -2,17 +2,20 @@
 
 //Your Code Here
 
-const justCoolStuff = 
+// const justCoolStuff = 
 
-const coolStuffList = []
-for (let cs = 0; cs < coolStuffList.length; cs++) {
-  for (let ms = 0; ms < myStuff.length; ms++) {
-    if (coolStuffList[cs] === myStuff[ms]){
-      coolStuffList.push(coolStuffList[cs]);
-    }
-  }
+// const coolStuffList = []
+// for (let cs = 0; cs < coolStuffList.length; cs++) {
+//   for (let ms = 0; ms < myStuff.length; ms++) {
+//     if (coolStuffList[cs] === myStuff[ms]){
+//       coolStuffList.push(coolStuffList[cs]);
+//     }
+//   }
+// }
+
+const justCoolStuff = (array1, array2) => {
+  return array1.filter(item => array2.includes(item))
 }
-
 
 // Feel free to uncomment the code below to test your function
 
