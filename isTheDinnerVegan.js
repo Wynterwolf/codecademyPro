@@ -5,8 +5,7 @@
 const meal = [
   { name: "arugula", source: "plant" },
   { name: "tomatoes", source: "plant" },
-  { name: "lemon", source: "plant" },
-  { name: "olive oil", source: "plant" }
+  { name: "lemon", source: "plant" }
 ];
 
 // isTheDinnerVegan(meal); // Should return true
@@ -21,9 +20,14 @@ const meal = [
 //   return false;
 //   }
 
-const isTheDinnerVegan = meal =>
-  meal.reduce((_, curr) => (curr.source === "plant" ? true : false), false);
-
+const isTheDinnerVegan = meal => {
+  for (const ingredient of meal) {
+    if (ingredient.source !== "plant") {
+      return false;
+    }
+  }
+  return true;
+};
 // Feel free to comment out the code below to test your function
 
 const dinner = [
