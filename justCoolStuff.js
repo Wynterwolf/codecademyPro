@@ -15,4 +15,3 @@ const justCoolStuff = (array1, array2) => {
   console.log(justCoolStuff(myStuff, coolStuff))
   // Should print [ 'fruit-by-the-foot', 'skateboards', 'my room' ]
   
-  
