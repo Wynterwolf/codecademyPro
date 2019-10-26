@@ -8,25 +8,34 @@
 
 //isTheDinnerVegan(meal); // Should return true
 
-// You can test your function when you’re ready by passing in the dinner array or by making your own! 
+
+// You can test your function when you’re ready by passing in the dinner array or by making your own!
 
 // Write your code here:
-const isTheDinnerVegan = (array) => {
-    if (dinner.source === 'plant') {
-      return true
+// const isTheDinnerVegan = (array) => {
+//     if (dinner.source === 'plant') {
+//       return true
+//     }
+//   return false;
+//   }
+
+const isTheDinnerVegan = meal => {
+  for (const ingredient of meal) {
+    if (ingredient.source !== "plant") {
+      return false;
     }
-  return false;
   }
-  
-  
-  
-  
-  
-  
-  
-  // Feel free to comment out the code below to test your function
-  
-  const dinner = [{name: 'hamburger', source: 'plant'}, {name: 'cheese', source: 'dairy'}, {name: 'ketchup', source:'plant'}, {name: 'bun', source: 'plant'}, {name: 'dessert twinkies', source:'unknown'}];
-  
-  console.log(isTheDinnerVegan(dinner))
-  // Should print false
+  return true;
+};
+// Feel free to comment out the code below to test your function
+
+const dinner = [
+  { name: "hamburger", source: "plant" },
+  { name: "cheese", source: "dairy" },
+  { name: "ketchup", source: "plant" },
+  { name: "bun", source: "plant" },
+  { name: "dessert twinkies", source: "unknown" }
+];
+
+console.log(isTheDinnerVegan(meal));
+// Should print false
