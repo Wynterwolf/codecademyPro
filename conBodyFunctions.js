@@ -2,7 +2,6 @@
   return day === 'Wednesday' ? true : false;
 }; */
 
-
 //refactor with concise body
 
-const plantNeedsWater = day => day === 'Wednesday' ? true : false;
+const plantNeedsWater = day => (day === "Wednesday" ? true : false);
