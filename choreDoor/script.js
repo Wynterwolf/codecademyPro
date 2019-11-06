@@ -8,6 +8,23 @@ let numClosedDoors = 3;
 let openDoor1;
 let openDoor2;
 let openDoor3;
+let closedDoorPath = 'https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg';
+
+const isClicked = (door) => {
+    if (door.src === closedDoorPath){
+        return false;
+    } else {
+        return true;
+}}
+
+let playDoor = () => {
+    numClosedDoors--;
+    if (numClosedDoors === 0) {
+        // game over function
+    } else {
+        
+    }
+}
 
 randomChoreDoorGenerator = () => {
     let choreDoor = Math.floor(Math.random() * numClosedDoors);
@@ -27,15 +44,22 @@ randomChoreDoorGenerator = () => {
 };
 
 doorImage1.onclick = () => {
-    doorImage1.src = openDoorX;
-};
+    if(!isClicked(doorImage1)) {
+        doorImage1.src = openDoor1;
+        playDoor();
+}};
 
 doorImage2.onclick = () => {
-    doorImage2.src = openDoorX;
-};
+    if(!isClicked(doorImage2)) {
+        doorImage2.src = openDoor2;
+        playDoor();
+    
+}};
 
 doorImage3.onclick = () => {
-    doorImage3.src = openDoorX;
-};
+    if(!isClicked(doorImage3)) {
+    doorImage3.src = openDoor3;
+    playDoor();
+}};
 
-randomChoreDoorGenerator();
+randomChoreDoorGenerator()
